@@ -6,6 +6,7 @@ namespace Lection2_27_06
     {
         static void Main(string[] args)
         {
+            Console.Write("Hello world!");
         }
     }
 }

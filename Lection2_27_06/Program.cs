@@ -148,47 +148,76 @@ namespace Lection2_27_06
             return input % 10 == 0 ? 100 : 50;
         }
 
+        //Пользователь вводит целое число.
+        //Если оно является четным и при этом не находится между 10 и 20,
+        //то вывести на экран его квадрат.
+        //В противном случае напечатать исходное число.
+
+        static bool Check1(int number)
+        {
+            Console.WriteLine("Checking that number is greater than 10");
+
+            return number > 10;
+        }
+
+        static bool Check2(int number)
+        {
+            Console.WriteLine("Checking that number is lower than 20");
+
+            return number < 20;
+        }
+
+        static int TestTask(int number)
+        {
+            return
+                (Check1(number) && Check2(number) && number % 2 == 0)
+                ? number * number
+                : number;
+        }
+
         static void Main(string[] args)
         {
-            int a = 10;
-            int b;
-            if(a % 2 == 0)
-            {
-                b = 5;
-            }
-            else
-            {
-                b = 123;
-            }
+            TestTask(5);
 
-            b = (a % 2 == 0) ? 5 : 123;
+            //int a = 10;
+            //int b;
+            //if(a % 2 == 0)
+            //{
+            //    b = 5;
+            //}
+            //else
+            //{
+            //    b = 123;
+            //}
 
-            a = a * 2;
-            a *= 2;
-            a /= 2;
-            a -= 10;
-            a += 5;
-            a = a + 1;
+            //b = (a % 2 == 0) ? 5 : 123;
 
-            a = 5;
-            ++a;//equivalent to 171//6
-            a++;//=>//7
-            int c = ++a;//c = 8; a = 8;
-            int d = a++;//a = 9; d = 8;
+            //a = a * 2;
+            //a *= 2;
+            //a /= 2;
+            //a -= 10;
+            //a += 5;
+            //a = a + 1;
 
-            int e = --a;//a = 8; e = 8;
-            int f = a--;//a = 7; f = 8;
+            //a = 5;
+            //++a;//equivalent to 171//6
+            //a++;//=>//7
+            //int c = ++a;//c = 8; a = 8;
+            //int d = a++;//a = 9; d = 8;
+
+            //int e = --a;//a = 8; e = 8;
+            //int f = a--;//a = 7; f = 8;
 
 
-            Console.WriteLine(MiddleNumber(1, 2, 3));
-            Console.WriteLine(MiddleNumber(1, 3, 2));
-            Console.WriteLine(MiddleNumber(3, 2, 1));
-            Console.WriteLine(MiddleNumber(3, 1, 2));
-            Console.WriteLine(MiddleNumber(2, 1, 3));
-            Console.WriteLine(MiddleNumber(2, 3, 1));
-            Console.WriteLine(MiddleNumber(3, 2, 3));
-            Console.WriteLine(MiddleNumber(3, 3, 2));
-            Console.WriteLine(MiddleNumber(2, 3, 3));
+            //Console.WriteLine(MiddleNumber(1, 2, 3));
+            //Console.WriteLine(MiddleNumber(1, 3, 2));
+            //Console.WriteLine(MiddleNumber(3, 2, 1));
+            //Console.WriteLine(MiddleNumber(3, 1, 2));
+            //Console.WriteLine(MiddleNumber(2, 1, 3));
+            //Console.WriteLine(MiddleNumber(2, 3, 1));
+            //Console.WriteLine(MiddleNumber(3, 2, 3));
+            //Console.WriteLine(MiddleNumber(3, 3, 2));
+            //Console.WriteLine(MiddleNumber(2, 3, 3));
             //(int x, int y) = CalculateSomething();
 
             //Console.WriteLine(x + " " + y);
